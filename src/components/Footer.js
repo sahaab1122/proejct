@@ -1,7 +1,11 @@
 
 import React, { Component } from "react";
-export default class Footer extends Component {
-  render() {
+import {useTranslation} from "react-i18next";
+
+export default ()=>{
+
+  const { t, i18n }  = useTranslation()
+
     return (
       <div
         className="text-center justify-center mb-5"
@@ -10,11 +14,10 @@ export default class Footer extends Component {
         <footer className="footer">
           <div className="pt-2">
             <span style={{ fontWeight: "bolder", fontSize: "20px", color: "black" }}>
-              &copy;All Right Reserved 2021
+              {t("©All Right Reserved 2021")}
             </span>
           </div>
         </footer>
       </div>
     );
   }
-}

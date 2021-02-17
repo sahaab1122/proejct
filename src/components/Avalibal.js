@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import AvalibalImg from '../assets/Layer 1.png';
-export default class Avalibal extends Component {
-    render() {
+import { useTranslation, } from "react-i18next"
+export default () => {
+
+    const { t } = useTranslation()
+    
         return (
             <div className="container available-main" style={{display:'flex', marginTop:'152px',flexWrap:'wrap'}}>
                 <div className="text-div">
-                    <h2>Also Available at</h2>
+                    <h2>{t("Also Available at")}</h2>
                 </div>
                 <div className="available-img" style={{marginLeft:'200px'}}>
                     <div className="available-img1">
@@ -15,4 +18,4 @@ export default class Avalibal extends Component {
             </div>
         )
     }
-}
+

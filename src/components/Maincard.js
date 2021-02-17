@@ -12,9 +12,10 @@ import Avalibal from "./Avalibal";
 import shop2bg from '../assets/MaskGroup1.png'
 import Contact from "./ContactUs";
 import Footer from "./Footer";
+import { useTranslation, } from "react-i18next"
+export default (props) => {
 
-class Maincard extends React.Component {
-    render() {
+    const { t } = useTranslation()
         return (
             <div className="card pmd-card  text-white text-center overlay-card m-0 p-0"  >
                 <div
@@ -54,13 +55,13 @@ class Maincard extends React.Component {
                     /> */}
                 </div>
                 {
-                    this.props.Home && 
+                    props.Home && 
                    <div>
                         <div style={{ position: 'relative' }} >
                     <Categories />
                     <Featured />
                 </div>
-                <About paragraph="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
+                <About paragraph={t("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")} />
                 <Avalibal />
                 <Contact />
                 <Footer />
@@ -71,5 +72,5 @@ class Maincard extends React.Component {
                 
         );
     }
-}
-export default Maincard
+
+

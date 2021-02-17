@@ -3,12 +3,11 @@ import Navbar from "./Navbar";
 import cateimg from "../assets/cateimg.png";
 import Ripples from 'react-ripples'
 import Categories from './Categories'
-
+import { useTranslation, } from "react-i18next"
 //import Featured from './Featured';
-class checkout extends React.Component {
+export default () => {
 
-
-    render() {
+    const { t } = useTranslation()
         return (
 
             <div style={{ height: 'auto' }}>
@@ -27,11 +26,11 @@ class checkout extends React.Component {
     </div>
     <div class='column1'>
 
-        <p style={{ textAlign:"left", fontSize: "29px",fontFamily:"poppins", marginBottom:"-1rem"}}>Price</p>
-        <span style={{textAlign:"left", fontSize: "64px", fontWeight:"600", fontFamily:"poppins", }}>$1123</span>
-        <span style={{ textAlign:"left",fontSize: "29px",fontFamily:"poppins" }}>Categories</span>
-    <button className="ripple" style={{fontFamily:"poppins", marginBottom:"10px"}}>Add to cart</button>
-    <button className="ripple" style={{fontFamily:"poppins" , textAlign: "center", }}>Buy it Now</button>
+        <p style={{ textAlign:"left", fontSize: "29px",fontFamily:"poppins", marginBottom:"-1rem"}}>{t("Price")}</p>
+        <span style={{textAlign:"left", fontSize: "64px", fontWeight:"600", fontFamily:"poppins", }}>{t("$1123")}</span>
+        <span style={{ textAlign:"left",fontSize: "29px",fontFamily:"poppins" }}>{t("Categories")}</span>
+    <button className="ripple" style={{fontFamily:"poppins", marginBottom:"10px"}}>{t("addToCart")}</button>
+    <button className="ripple" style={{fontFamily:"poppins" , textAlign: "center", }}>{t("buyItNow")}</button>
     
     </div>
 
@@ -48,5 +47,3 @@ class checkout extends React.Component {
 
         )
     }
-}
-export default checkout

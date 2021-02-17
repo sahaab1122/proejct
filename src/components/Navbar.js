@@ -3,15 +3,28 @@ import React from 'react'
 import logo1 from "../assets/logo1.png";
 import Sidebar from '../components/sidebar'
 import cateimg from "../assets/cateimg.png";
-class Navbar extends React.Component {
-  state = {click:false}
-  render() {
-    console.log(this.state);
+import {useTranslation} from "react-i18next"
+
+export default ()=>{
+   
+  const [click,setClick]=React.useState(false)
+ 
+    const { t, i18n }  = useTranslation()
+ const changeLanguage = (ln) => {
+   return() =>{
+     i18n.changeLanguage(ln);
+   console.log('Language changed to ${ln}');
+
+ };
+};   
     return (
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="col-sm-6 img-div">
           <img src={logo1} className="logo1" alt="logo" style={{ marginLeft: "40px", marginTop: "10px" }} />
-        </div>
+          <button onClick={changeLanguage("en")}>en</button>
+          <button onClick={changeLanguage("ar")}>ar</button>
+          </div>
+        
         <button
           className="navbar-toggler"
           type="button"
@@ -28,20 +41,22 @@ class Navbar extends React.Component {
           className="collapse navbar-collapse navbar-main"
           id="navbarSupportedContent"
         >
+      
           <ul className="navbar-nav">
+            
             <li className="nav-item active">
               <a className="nav-link text-white" href="/">
-                Home
+              {t("home")}
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link text-white" href="/">
-                About Us
+                {t("aboutUs")}
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link text-white" href="/">
-                Wishlist
+                {t("Wishlist")}
               </a>
             </li>
             <li className="nav-item">
@@ -50,20 +65,20 @@ class Navbar extends React.Component {
                 style={{ backgroundColor: "#7e0001" }}
                 href="/"
               >
-                Shop Now
+                {t("Shop Now")}
               </a>
             </li>
             <li  className="nav-item">
-              <a onClick={() => this.setState({click:true})}    className="nav-link text-black" >
+              <a onClick={() => setClick(true)}    className="nav-link text-black" >
                 <i class="fas fa-shopping-basket text-white " >  </i>
               </a>
             </li>
           </ul>
         </div>
 
-        <th className={this.state.click === true ? "col-35 collapse new" : "col-35 collapse"}  style={{ backgroundColor: "white", position: "fixed", top: '0px', right: "0", height: "100%", width: "auto" }}>
+        <th className={click === true ? "col-35 ss new" : "col-35 ss new-1"}  style={{ backgroundColor: "white", position: "fixed", top: '0px', right: "0", height: "100%", width: "auto" }}>
           <br></br>
-          <button onClick={() => this.setState({click:false})} type="button" class="close" aria-label="Close" style={{ marginRight: "45px" }}>
+          <button onClick={() => setClick(false)}  type="button" class="close" aria-label="Close" style={{ marginRight: "45px" }}>
             <span aria-hidden="true">&times;</span>
           </button>
           <div class="card " style={{ borderRadius: "12px", width: "175px", height: "65px", marginLeft: "20px", alignContent: "center", backgroundColor: "#e9e9e9" }}>
@@ -75,7 +90,7 @@ class Navbar extends React.Component {
                 </div>
                 <div class="column" style={{ fontSize: '21px', fontFamily: "poppins", color: "#960200" }}>
 
-                  <p style={{ marginTop: "-3px", marginRight: "50px" }}>Cart</p>
+                  <p style={{ marginTop: "-3px", marginRight: "50px" }}>{t("Cart")}</p>
 
 
 
@@ -90,15 +105,15 @@ class Navbar extends React.Component {
 
                 </div>
                 <div class="column" style={{ backgroundcolor: "#bbb", fontSize: '9px', fontFamily: "poppins" }}>
-                  <p >Product Name</p>
-                  <p style={{ marginTop: "-10px" }}>Category</p>
-                  <button style={{ marginTop: "-20px", marginLeft: "20px", width: "63px", height: "22px", borderRadius: "4px", background: "#960200", color: "white" }}>Remove</button>
+                  <p >{t("Product Name")}</p>
+                  <p style={{ marginTop: "-10px" }}>{t("Category")}</p>
+                  <button style={{ marginTop: "-20px", marginLeft: "20px", width: "63px", height: "22px", borderRadius: "4px", background: "#960200", color: "white" }}>{t("Remove")}</button>
 
 
                 </div>
                 <div class="column" style={{ backgroundcolor: "#bbb", fontSize: '9px', fontFamily: "poppins" }}>
-                  <p>Price</p>
-                  <p>$1123</p>
+                  <p>{t("Price")}</p>
+                  <p>{t("$1123")}</p>
 
 
                 </div></div>
@@ -115,15 +130,15 @@ class Navbar extends React.Component {
 
                 </div>
                 <div class="column" style={{ backgroundcolor: "#bbb", fontSize: '9px', fontFamily: "poppins" }}>
-                  <p >Product Name</p>
+                  <p >{t("Product Name")}</p>
                   <p style={{ marginTop: "-10px" }}>Category</p>
-                  <button style={{ marginTop: "-20px", marginLeft: "20px", width: "63px", height: "22px", borderRadius: "4px", background: "#960200", color: "white" }}>Remove</button>
+                  <button style={{ marginTop: "-20px", marginLeft: "20px", width: "63px", height: "22px", borderRadius: "4px", background: "#960200", color: "white" }}>{t("Remove")}</button>
 
 
                 </div>
                 <div class="column" style={{ backgroundcolor: "#bbb", fontSize: '9px', fontFamily: "poppins" }}>
-                  <p>Price</p>
-                  <p>$1123</p>
+                  <p>{t("Price")}</p>
+                  <p>{t("$1123")}</p>
 
 
                 </div></div>
@@ -140,15 +155,15 @@ class Navbar extends React.Component {
 
                 </div>
                 <div class="column" style={{ backgroundcolor: "#bbb", fontSize: '9px', fontFamily: "poppins" }}>
-                  <p >Product Name</p>
-                  <p style={{ marginTop: "-10px" }}>Category</p>
-                  <button style={{ marginTop: "-20px", marginLeft: "20px", width: "63px", height: "22px", borderRadius: "4px", background: "#960200", color: "white" }}>Remove</button>
+                  <p >{t("Product Name")}</p>
+                  <p style={{ marginTop: "-10px" }}>{t("Category")}</p>
+                  <button style={{ marginTop: "-20px", marginLeft: "20px", width: "63px", height: "22px", borderRadius: "4px", background: "#960200", color: "white" }}>{t("Remove")}</button>
 
 
                 </div>
                 <div class="column" style={{ backgroundcolor: "transparent", fontSize: '9px', fontFamily: "poppins" }}>
-                  <p>Price</p>
-                  <p>$1123</p>
+                  <p>{t("Price")}</p>
+                  <p>{t("$1123")}</p>
 
 
                 </div></div>
@@ -163,7 +178,7 @@ class Navbar extends React.Component {
                 <div class="column" style={{
                   fontfamily: "Poppins", fontweight: "500", fontsize: "19px", textalign: "left", color: "#960200"
                 }}>
-                  <p style={{ textalign: "left" }}>Total</p>
+                  <p style={{ textalign: "left" }}>{t("Total")}</p>
 
                 </div>
                 <div class="column" style={{ backgroundcolor: "#bbb", fontSize: '29px', fontFamily: "poppins" }}>
@@ -173,7 +188,7 @@ class Navbar extends React.Component {
                 </div>
                 <div class="column" style={{ backgroundcolor: "transparent", fontSize: '29px', fontFamily: "poppins" }}>
 
-                  <p >$1123</p>
+                  <p >{t("$1123")}</p>
 
 
                 </div></div>
@@ -189,6 +204,6 @@ class Navbar extends React.Component {
       </nav>
     );
   }
-}
-export default Navbar
+
+
 

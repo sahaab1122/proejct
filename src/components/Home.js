@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Navbar from './Navbar'
 import Maincard from './Maincard'
 import Featured from './Featured'
+import axios from 'axios';
+
+    
+
 
 class Home extends React.Component {
     render() {

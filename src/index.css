@@ -12,6 +12,9 @@
     line-height: 24px;
     z-index: 1;
   }
+  .col-sm-6{
+    width: 400px;
+  }
   .img-div {
     height: 100px;
   }
@@ -61,8 +64,26 @@
   border: none;
 }
 .new{
-  display: block!important;
-  transition: all .5s ease-in;
+  visibility: visible!important;
+  transition : all 0.5;
+  opacity: 1;
+  
+
+}
+.new-1{
+  visibility: hidden!important;
+  transition : all 0.5;
+  opacity: 0;
+  
+
+
+}
+.custom-select{
+  width: auto;
+  height: auto;
+}
+.ss{
+  transition: all .5s;
 }
 .openbtn:hover {
   background-color: #444;
@@ -571,7 +592,7 @@ text-align: center;
     } */
   
     .logo {
-      margin-left: 200px;
+      margin-left: 100px;
       margin-top: 19px;
     }
   

@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import FeatureData from './FeatureData'
-export default class Featured extends Component {
-  render() {
+import {useTranslation} from "react-i18next"
+
+export default ()=>{
+
+  const { t, i18n }  = useTranslation()
+
     return (
       <div style={{ marginTop: "110px" }}>
         <div class="m-auto text-center">
-          <h2 style={{ fontSize: "41px" , color: "black"}}>Featured</h2>
+          <h2 style={{ fontSize: "41px" , color: "black"}}>{t("Featured")}</h2>
         </div>
         <div className="container">
           <div className="feature-main">
@@ -27,20 +31,21 @@ export default class Featured extends Component {
                       class="text-center"
                       style={{ marginBottom: "0px", fontSize: "22px" }}
                     >
-                      {Fdata.name}
+                      
+                      {t(Fdata.name)}
                     </p>
                 
                     <p
                       class="text-center"
                       style={{ fontSize: "19px", paddingTop: "2px" }}
                     >
-                      {Fdata.category}
+                      {t(Fdata.category)}
                     </p>
                     <div className="feature-text">
                       <p>
-                        <span style={{ fontSize: "20px" , color: "black" }}>Price</span>
+                        <span style={{ fontSize: "20px" , color: "black" }}>{t("Price")}</span>
                         <span style={{ fontSize: "29px", paddingLeft: "42px" }}>
-                          ${Fdata.price}
+                          ${t(Fdata.price)}
                         </span>
                       </p>
                     </div>
@@ -53,4 +58,4 @@ export default class Featured extends Component {
       </div>
     );
   }
-}
+

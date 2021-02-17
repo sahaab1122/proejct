@@ -22,6 +22,7 @@ import CateImg from "../assets/cateimg.png";
       price:1123
     },
     {
+   
         id: 4,
         name: "Product Name",
         category: "Category",
