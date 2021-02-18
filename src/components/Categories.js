@@ -30,7 +30,7 @@ export default () => {
 
   return (
     <div className="cat-main">
-      <div className="text-center">
+      <div className="text-center"style={{marginTop:"-100px"}}>
         <h2 style={{ fontSize: "41px", color: "black" }}>{t("Categories")}</h2>
       </div>
       <div className="container" style={{ paddingTop: "52px" }}>

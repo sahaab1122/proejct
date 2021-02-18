@@ -81,21 +81,18 @@ export default ()=>{
           <button onClick={() => setClick(false)}  type="button" class="close" aria-label="Close" style={{ marginRight: "45px" }}>
             <span aria-hidden="true">&times;</span>
           </button>
-          <div class="card " style={{ borderRadius: "12px", width: "175px", height: "65px", marginLeft: "20px", alignContent: "center", backgroundColor: "#e9e9e9" }}>
-            <div class="card-body text-center">
+
+         <button class="card " style={{ borderRadius: "12px", width: "175px", height: "65px", marginLeft: "20px", alignContent: "center", backgroundColor: "#e9e9e9" }}>
+         <div class="card-body text-center">
               <div class="row" style={{ marginLeft: "20px" }} >
-                <div class="column" style={{ backgroundcolor: "#f2f2f2" }}>
+                <div class="column" style={{ backgroundcolor: "#f2f2f2",marginRight:"3px" }}>
                   <i class="fas fa-shopping-basket" style={{ color: "#960200", textalign: "left" }}></i>
 
                 </div>
-                <div class="column" style={{ fontSize: '21px', fontFamily: "poppins", color: "#960200" }}>
+                <div class="column" style={{ fontSize: '21px', fontFamily: "poppins", color: "#960200", marginRight:"10px" }}>
 
-                  <p style={{ marginTop: "-3px", marginRight: "50px" }}>{t("Cart")}</p>
-
-
-
-                </div></div></div></div>
-
+                  <p style={{ marginTop: "-3px", marginRight: "40px" }}>{t("Cart")}</p></div></div></div>
+         </button >
           <br></br>
           <div class="card " style={{ borderRadius: "12px", width: "312px", height: "103px", marginLeft: "20px", backgroundColor: "#e9e9e9" }}>
             <div class="card-body text-center">

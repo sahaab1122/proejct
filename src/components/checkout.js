@@ -5,6 +5,8 @@ import Ripples from 'react-ripples'
 import Categories from './Categories'
 import { useTranslation, } from "react-i18next"
 //import Featured from './Featured';
+import Footer from "./Footer";
+import Contact from "./ContactUs";
 export default () => {
 
     const { t } = useTranslation()
@@ -20,7 +22,7 @@ export default () => {
                 <div class='some-page-wrapper'>
   <div class='row'>
     <div class='column'>
-    <img src={cateimg} style={{ width: "50%",marginLeft: "250px", }} />
+    <img src={cateimg} style={{ width: "50%",marginLeft: "250px", borderRadius:"11px",marginBottom:"60px"}} />
         
       
     </div>
@@ -36,7 +38,7 @@ export default () => {
 
   </div>    <Categories />
   
-</div>
+</div><Contact /><Footer />
 </div>
                 </div>
                 

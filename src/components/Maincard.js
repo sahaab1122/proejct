@@ -19,7 +19,7 @@ export default (props) => {
         return (
             <div className="card pmd-card  text-white text-center overlay-card m-0 p-0"  >
                 <div
-                    className="main-card parent "style={{ height: "101vh", }}>
+                    className="main-card parent "style={{ height: "101vh", marginBottom:"0px", paddingBottom:"0px" }}>
                         <div className="shop2bg" style={{position:'absolute',marginTop:'-110px'}}>
 
                         </div>
