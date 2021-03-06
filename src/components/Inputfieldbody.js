@@ -1,183 +1,226 @@
 import React from "react";
 import Navbar from "./Navbar";
 import cateimg from "../assets/cateimg.png";
-import {useTranslation} from "react-i18next"
+import { useTranslation } from "react-i18next"
 import { faCity } from "@fortawesome/free-solid-svg-icons";
 import city from "../assets/city.png";
 
 export default (props) => {
 
   const { t } = useTranslation()
-        return (
-          
+  return (
+
+
+
+    <div>
+      <div className="img-2">
+        <Navbar />
+      </div>
+      <div class="row no-gutters" >
+        <div class="col-md-6" >
+          <div class="jumbotron jumbotron-fluid"  >
+            <div class="container">
+              <form style={{marginLeft:"100px"}}>
+                <div class="form-row">
+                  <div class="form-group col-md-5">
+                    <p style={{ textAlign: "left" }}>{t("Add Coupon")}</p>
+                    <input type="coupon" class="form-control" id="inputEmail4" placeholder={t("coupon")} style={{ backgroundcolor: "#f2f2f",border:"0px" }}></input>
+                  </div>
+                  <button type="button" class="btn btn-danger btn-sm" style={{ height: "40px", marginTop: "45px", width: "125px" }}>{t("Apply")}</button>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <p style={{ textAlign: "left" }}>{t('Enter Details')}</p>
+                    <input type="Full Name"style={{border:"0px"}} class="form-control" id="inputEmail4" placeholder={t("Full Name")}></input>
+                  </div>
+                  <div class="form-group col-md-4">
+
+                    <input type="address"  class="form-control" id="inputPassword4" placeholder={t("Address")} style={{ marginTop: "47px",border:"0px" }}></input>
+                  </div>
+                </div>
+
+
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+
+                    <input type="Phone Number" style={{border:"0px"}} class="form-control" id="inputEmail4" placeholder={t("Phone Number")}></input>
+                  </div>
+                  <div class="form-group col-md-4">
+
+                    <input type="City"  style={{border:"0px"}}class="form-control" id="inputPassword4" placeholder={t("City")} ></input>
+                  </div>
+                </div>
+
+
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+
+                    <input type="email" style={{border:"0px"}} class="form-control" id="inputEmail4" placeholder={t("Email")}></input>
+                  </div>
+                  <div class="form-group col-md-4" >
+
+                    <input type="Country" style={{border:"0px"}} class="form-control" id="inputPassword4" placeholder={t("Country")} ></input>
+                  </div>
+                </div>
+
+                <div class="form-group" style={{ width: "66.5%", color:"#4b4b4b" }}>
+
+                  <textarea class="form-control" style={{border:"0px"}} id="exampleFormControlTextarea1" rows="4" cols="2" placeholder={t("Remarks")}></textarea>
+                </div>
+
+
+                <button type="button" class="btn  btn-lg btn-block" style={{ width: "66.5%" }}>{t("Place Order")}</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="jumbotron jumbotron-fluid" style={{ backgroundcolor: "#e3f2fd;",  }}>
+            <div class="container" style={{ width: "70%" }}>
+              <div class="card mb-3" style={{ height: "auto", borderRadius: "20px" ,border:"0px"}}>
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src={cateimg} style={{ width: "102px", height: "101px", padding: "12px", borderRadius: "20px" }} />
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card-body" style={{ textAlign: "center" }}>
+
+                      <div class="column" style={{ backgroundcolor: "#bbb", fontSize: '12px', fontFamily: "poppins", margin: "0px", padding: "0px" }}>
+                        <p >{t("Product Name")}</p>
+                        <p style={{ marginTop: "-10px" }}>{t("Category")}</p>
+
+
+                        <button type="button" class="btn btn-secondary btn-sm btn-block" style={{ borderRadius: "4px", background: "#960200", color: "white", width: "95px", alignSelf: "center" }}>{t("Remove")}</button>
+                      </div>
+
+                    </div>
+
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card-body" style={{ textAlign: "center", }}>
+
+                      <div class="column" style={{ backgroundcolor: "#bbb", fontSize: '19px', fontFamily: "poppins" }}>
+                        <p>{t("Price")}</p>
+                        <p>{t("$1123")}</p>
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="container" style={{ width: "70%"  }}>
+              <div class="card mb-3" style={{ height: "auto", borderRadius: "20px",border:"0px" }}>
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src={cateimg} style={{ width: "102px", height: "101px", padding: "12px", borderRadius: "20px" }} />
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card-body" style={{ textAlign: "center" }}>
+
+                      <div class="column" style={{ backgroundcolor: "#bbb", fontSize: '12px', fontFamily: "poppins", margin: "0px", padding: "0px" }}>
+                        <p >{t("Product Name")}</p>
+                        <p style={{ marginTop: "-10px" }}>{t("Category")}</p>
+
+
+                        <button type="button" class="btn btn-secondary btn-sm btn-block" style={{ borderRadius: "4px", background: "#960200", color: "white", width: "95px", alignSelf: "center" }}>{t("Remove")}</button>
+                      </div>
+
+                    </div>
+
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card-body" style={{ textAlign: "center", }}>
+
+                      <div class="column" style={{ backgroundcolor: "#bbb", fontSize: '19px', fontFamily: "poppins" }}>
+                        <p>{t("Price")}</p>
+                        <p>{t("$1123")}</p>
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="container" style={{ width: "70%" }}>
+              <div class="card mb-3" style={{ height: "auto", borderRadius: "20px",border:"0px" }}>
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src={cateimg} style={{ width: "102px", height: "101px", padding: "12px", borderRadius: "20px" }} />
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card-body" style={{ textAlign: "center" }}>
+
+                      <div class="column" style={{ backgroundcolor: "#bbb", fontSize: '12px', fontFamily: "poppins", margin: "0px", padding: "0px" }}>
+                        <p >{t("Product Name")}</p>
+                        <p style={{ marginTop: "-10px" }}>{t("Category")}</p>
+
+
+                        <button type="button" class="btn btn-secondary btn-sm btn-block" style={{ borderRadius: "4px", background: "#960200", color: "white", width: "95px", alignSelf: "center" }}>{t("Remove")}</button>
+                      </div>
+
+                    </div>
+
+                  </div>
+                  <div class="col-md-4" style={{ width: "70%" }}>
+                    <div class="card-body" style={{ textAlign: "center", }}>
+
+                      <div class="column" style={{ backgroundcolor: "#bbb", fontSize: '19px', fontFamily: "poppins" }}>
+                        <p>{t("Price")}</p>
+                        <p>{t("$1123")}</p>
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="card-body" className="text-left" style={{ width: "100%", marginRight:"400px"  }}>
+              <div class="card mb-3" style={{ border: "0px", borderRadius: "20px" }}>
+                <div class="row g-0">
+                  <div class="col-md-4" style={{ alignSelf: "center " }}>
+                    <p style={{ fontfamily: "Poppins", fontweight: "700", fontsize: "39px", color: "#960200", marginLeft: "50px" }}>{t("Total")}</p>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <div class="column" style={{ backgroundcolor: "transparent", fontSize: '29px ', fontFamily: "poppins", color: "#960200", textAlign: "right" }}>
+
+                        <p >{t("$1123")}</p></div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            </div>
 
             
-       	<div>
-           <div className="img-1">
-            <Navbar /></div>
-	<table style={{marginLeft:"160px"}} >
-  <tr  >
-    <th className="col-65" style={{backgroundColor:"white",fontfamily: "Poppins",fontweight: "400", fontsize: "38px",textalign: "left" ,color: "#960200"}}><p style={{ marginTop:"20px"}}>{t("Add Coupon")}</p>
-    <input type="text" id="fname" name="firstname" placeholder={t("coupon")}style={{width: "277px", height: "38px", borderRadius: "6px" ,background:" #f2f2f2",border:"none" }}></input>
-   <button class="block" style={{marginLeft:"20px" ,width:"155px", height: "38px", borderRadius:"6px",background: "#960200", color:"white",border:"none"}}>{t("Apply")}</button>
-   <td><p style={{fontfamily: "Poppins" ,fontweight: "600", fontsize: "45px",textalign: "left", color: "#960200", fontSize:"26px", marginTop:"30px"}}> {t("Enter Details")}</p> </td><br></br>
-   <tr >
-		<th >
-    <input type="text" id="fname" name="firstname" placeholder={t("Full Name")} style={{width: "225px", height: "38px", borderRadius:"6px"  ,background:" #f2f2f2" ,border:"none" }}></input>
-		</th>
-		<th >
-    <input type="text" id="fname" name="firstname" placeholder={t("Address")} style={{width: "225px", height: "38px", borderRadius:"6px" ,background:" #f2f2f2" ,marginLeft:"30px" ,border:"none" }}></input>
-		</th>
-    
-	</tr>
-  <br></br>
-  <tr >
-  <th >
-  <input type="text" id="fname" name="firstname" placeholder={t("Phone Number")} style={{width: "225px", height: "38px", borderRadius:"6px" ,background:" #f2f2f2",border:"none"  }}></input>
-		</th>
-		<th >
-    < input type="text" id="fname" name="firstname" placeholder={t("City")} style={{width: "225px", height: "38px", borderRadius:"6px" ,background:" #f2f2f2" ,marginLeft:"30px",border:"none" }}></input>
-		
-    </th>
-  </tr>
-  <br></br>
-  <tr>
-  <th >
-  <input type="text" id="fname" name="firstname" placeholder={t("Email")} style={{width: "225px", height: "38px",borderRadius:"6px",background:" #f2f2f2",border:"none"  }}></input>
-		</th>
-		<th >
-    <input type="text" id="fname" name="firstname" placeholder={t("country")} style={{width: "225px", height: "38px", borderRadius:"6px" ,background:" #f2f2f2" ,marginLeft:"30px" ,border:"none"}}></input>
-		</th>
-  </tr>
-  <br></br>
-  
-  <textarea rows="4" cols="59" name="comment" form="usrform" placeholder={t("remarks")} style={{ borderRadius:"6px" ,background:" #f2f2f2",border:"none"}}>
-</textarea>
-  
-  <tr><button class="block" style={{width:"488px", height: "38px", borderRadius:"6px",background: "#960200", color:"white",border:"none"}}>{t("Place Order")}</button></tr>    
-    </th>
-
-
-
-    <th  className="col-35" style={{backgroundColor:"WHITE"}}>
-    
-      <div class="card " style={{borderRadius:"12px", width:"312px",height:"103px",marginLeft:"70px"}}>
-      <div class="card-body text-center">
-      <div class="row" style={{marginLeft:"20px"}} >
-      <div class="column" style={{backgroundcolor:"#f2f2f2"}}>
-      <img src={cateimg} style={{ width: "72px",height:"71px", }} />
-    
-  </div>
-  <div class="column" style={{backgroundcolor:"#bbb",fontSize:'9px', fontFamily:"poppins"}}>
-  <p >{t("Product Name")}</p>
-    <p>{t("Category")}</p>
-    <button style={{marginTop:"-10px" ,marginLeft:"20px" ,width:"63px", height: "22px", borderRadius:"4px",background: "#960200", color:"white"}}>{t("Remove")}</button>
-  
-    
-  </div>
-  <div class="column" style={{backgroundcolor:"#bbb" ,fontSize:'9px', fontFamily:"poppins"}}>
-  <p>{t("Price")}</p>
-    <p>{t("$1123")}</p>
-    
-    
-  </div></div>
+          </div>
+        </div>
       </div>
-    </div>  
-      
-      
-      
-      <div class="card " style={{borderRadius:"12px", width:"312px",height:"103px", marginTop:"10px",marginLeft:"70px"}}>
-      <div class="card-body text-center">
-      <div class="row" style={{marginLeft:"20px"}} >
-      <div class="column" style={{backgroundcolor:"#f2f2f2"}}>
-      <img src={cateimg} style={{ width: "72px",height:"71px", }} />
-    
-  </div>
-  <div class="column" style={{backgroundcolor:"#bbb",fontSize:'9px', fontFamily:"poppins"}}>
-  <p >{t("Product Name")}</p>
-    <p>{t("Category")}</p>
-    <button style={{marginTop:"-10px" ,marginLeft:"20px" ,width:"63px", height: "22px", borderRadius:"4px",background: "#960200", color:"white"}}>{t("Remove")}</button>
-  
-    
-  </div>
-  <div class="column" style={{backgroundcolor:"#bbb" ,fontSize:'9px', fontFamily:"poppins"}}>
-  <p>{t("Price")}</p>
-    <p>$1123</p>
-    
-    
-  </div></div>
-      </div>
-    </div>  
-      
-      
-      
-      <div class="card " style={{borderRadius:"12px", width:"312px",height:"103px", marginTop:"10px",marginLeft:"70px"}}>
-      <div class="card-body text-center">
-      <div class="row" style={{marginLeft:"20px"}} >
-      <div class="column" style={{backgroundcolor:"transparent"}}>
-      <img src={cateimg} style={{ width: "72px",height:"71px", }} />
-    
-  </div>
-  <div class="column" style={{backgroundcolor:"#bbb",fontSize:'9px', fontFamily:"poppins"}}>
-  <p >{t("Product Name")}</p>
-    <p>{t("Category")}</p>
-    <button style={{marginTop:"-10px" ,marginLeft:"20px" ,width:"63px", height: "22px", borderRadius:"4px",background: "#960200", color:"white"}}>{t("Remove")}</button>
-  
-    
-  </div>
-  <div class="column" style={{backgroundcolor:"transparent" ,fontSize:'9px', fontFamily:"poppins"}}>
-  <p>{t("Price")}</p>
-    <p>$1123</p>
-    
-    
-  </div></div>
-      </div>
-    </div>  
-      
-      
-    <div class="card " style={{borderRadius:"12px", width:"381px",height:"65px",marginTop:"20px"}}>
-      <div class="card-body text-center">
-      <div class="row" style={{marginLeft:"20px"}} >
-      <div class="column" style={{fontfamily: "Poppins",fontweight: "400",fontsize: "19px",textalign: "left",color: "#960200"
-}}>
-      <p style={{ textalign:"left"}}>{t("Total")}</p>
-    
-  </div>
-  <div class="column" style={{backgroundcolor:"#bbb",fontSize:'29px', fontFamily:"poppins"}}>
-  
-   
-    
-  </div>
-  <div class="column" style={{backgroundcolor:"transparent" ,fontSize:'29px', fontFamily:"poppins"}}>
-  
-    <p >$1123</p>
-    
-    
-  </div></div>
-      </div>
-    </div>  
-      
-      
-      
 
-
-    </th>
-    
-  </tr>
-  
-
-</table>
-	
-</div>
-    
-          
-      
-   
+    </div>
 
 
 
-        )
-    }
+
+
+
+
+  )
+}
 
 
 

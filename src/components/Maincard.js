@@ -9,7 +9,7 @@ import Featured from './Featured'
 import About from './About Us';
 import Navbar from "./Navbar";
 import Avalibal from "./Avalibal";
-import shop2bg from '../assets/MaskGroup1.png'
+import shop2bg from '../assets/MainCard1.png'
 import Contact from "./ContactUs";
 import Footer from "./Footer";
 import { useTranslation, } from "react-i18next"
@@ -17,10 +17,13 @@ export default (props) => {
 
     const { t } = useTranslation()
         return (
-            <div className="card pmd-card  text-white text-center overlay-card m-0 p-0"  >
+            <div className="card pmd-card  text-white  overlay-card m-0 p-0"  >
                 <div
-                    className="main-card parent "style={{ height: "101vh", marginBottom:"0px", paddingBottom:"0px" }}>
-                        <div className="shop2bg" style={{position:'absolute',marginTop:'-110px'}}>
+                    className="main-card parent "style={{ height: "101vh", marginBottom:"0px", paddingBottom:"0px"}}>
+                                                <Navbar />
+                        
+                        <div className="shop2bg" style={{position:'absolute'}}>
+
 
                         </div>
                     {/* <div

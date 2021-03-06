@@ -6,7 +6,7 @@ export default (props) => {
 
   const { t } = useTranslation()
     return (
-      <div classNameName="main-about">
+      <div className="main-about" id="About"  >
         <div className="main-div card pmd-card overlay-card">
           <img
             src={AboutImg}

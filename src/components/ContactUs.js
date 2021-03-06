@@ -10,17 +10,18 @@ export default (props)=>{
       <div
         className="container-fluid "
         style={{ display: "flex", flexWrap: "wrap", marginTop: "100px",backgroundImage:props.img1 ? "url()" : "url()"}}
-      >
-        <div className="col-6 col-sm-6 col-lg-3 col-md-6 logo-div">
-          <img src={social} alt="logo" width="185px" height="81.64px" />
-        </div>
+      ><div>
+        
+        <div className="  logo-div" style={{marginLeft:"50px"}}>
+          <a><img src={social} alt="logo" width="185px" height="81.64px" /></a>
+        </div></div>
         <div></div>
-        <div className="col-6 col-sm-6 col-lg-3 col-md-6">
-          <h4
+        <div className=" col-sm-6 col-lg-3 col-md-6" style={{alignSelf:"center",width:"100%"}}>
+         <div> <h4
             style={{ fontSize: "29px", fontWeight: "bolder", color: "#960200" }}
           >
             {t("Social Media")}
-          </h4>
+          </h4></div>
           <a className="nav-link" href="/" style={{ fontSize: "21px",color:'black' }}>
             <i className="fab fa-facebook-f pr-3"></i>{t("Facebook")}
           </a>

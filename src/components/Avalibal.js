@@ -6,9 +6,9 @@ export default () => {
     const { t } = useTranslation()
     
         return (
-            <div className="container available-main" style={{display:'flex', marginTop:'152px',flexWrap:'wrap'}}>
+            <div className="container available-main" style={{display:'flex', marginTop:'152px',flexWrap:'wrap',alignSelf:"center"}}>
                 <div className="text-div">
-                    <h2>{t("Also Available at")}</h2>
+                    <h2 style={{}}>{t("Also Available at")}</h2>
                 </div>
                 <div className="available-img" style={{marginLeft:'200px'}}>
                     <div className="available-img1">
